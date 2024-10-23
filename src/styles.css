@@ -1,0 +1,527 @@
+@font-face {
+    font-family: 'Laurasia'; 
+    src: url('./assets/fonts/Laurasia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Laurasia-Ligature'; 
+    src: url('./assets/fonts/Laurasia-Ligature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #F2F2F2;
+    height: 100px;
+    z-index: 1000;
+}
+
+.logoContainer {
+    width: 10%;
+}
+
+#logoImage {
+    width: auto;
+    height: 60px;
+}
+
+
+nav {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.navButtons {
+    font-family: 'Laurasia', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    touch-action: manipulation;
+}
+  
+.navButtons:after {
+    content: "";
+    background-color: #D9304F;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    transition: 0.1s;
+}
+
+.navButtons:hover:after {
+    top: 0px;
+    left: 0px;
+}
+  
+#content {
+    margin-top: 100px;
+    width: 100%;
+
+}
+
+.heroDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9304F;
+    padding: 15px;
+    width: 100%;
+    height: 400px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.welcomeText {
+    font-family: 'Laurasia', sans-serif;
+    font-size: 9vw;
+    text-align: left;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.orderButton {
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Laurasia', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    padding: 15px 40px;
+    text-align: center;
+    touch-action: manipulation;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+.orderButton:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+}
+
+.orderButton:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+.rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+
+.burgerImage {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 1200px; 
+    width: 95%; 
+    margin: 0 auto; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 15px;
+    overflow: hidden;
+
+}
+  
+.grid-item {
+    background-color: #D9304F;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+
+}
+
+
+.grid-item h3 {
+    font-family: 'Laurasia', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    flex-grow: 0;
+    color: white;
+}
+
+.grid-item p {
+    font-family: 'Laurasia-Ligature'; 
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 0;
+}
+
+.grid-item img {
+
+}
+
+.grid-item button {
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Laurasia', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.grid-item button:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+}
+
+.grid-item button:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+.menuDiv {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menuTitle {
+    font-family: 'Laurasia', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #D9304F;
+}
+
+.tabContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 100px;
+    z-index: 10;
+    background-color: #F2F2F2;
+    padding: 10px 0;
+}
+
+.tabButton {
+    background-color: #D9304F;  
+    color: #ffffff;  
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    transition: background-color 0.3s ease;
+    font-family: 'Laurasia', sans-serif;
+}
+
+.tabButton:hover {
+    background-color: #c11330;
+}
+
+.category-section {
+    margin: 50px 0;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.category-section h2 {
+    font-size: 2.5rem;    
+    font-family: 'Laurasia', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e31837;
+    background-color: black;
+}
+
+
+.category-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Laurasia', sans-serif;
+    color: #333;
+    
+}
+
+.menu-item {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: 'Laurasia', sans-serif;
+    line-height: 1.6;
+}
+
+.menu-item-name {
+    display: block;  
+    font-size: 1.4rem;  
+    font-weight: bold; 
+    color: #000000; 
+    color: #e31837;
+}
+
+.menu-item-description {
+    display: block;  
+    font-size: 1.2rem;  
+    color: #333333;  
+    margin-top: 5px; 
+}
+
+.menu-item strong {
+    font-weight: bold;
+}
+
+.menu-item-name:before {
+    content: "• ";  
+    font-size: 1.5rem;
+    color: #e31837;
+}
+
+h3 {
+    color: #e31837;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Laurasia', sans-serif;
+}
+
+.toppingsDiv h3, .toppingsDiv p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.searchDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9304F; 
+    padding: 20px; 
+    width: 100%;
+    height: 300px; 
+    color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    margin-top: 20px; 
+}
+
+.careersText {
+    font-family: 'Laurasia', sans-serif; 
+    font-size: 2.5rem; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.jobTitleDiv, .locationTitleDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px; 
+}
+
+input[type="text"] {
+    font-family: 'Laurasia', sans-serif; 
+    font-size: 1rem; 
+    padding: 10px; 
+    margin-right: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 300px; 
+}
+
+.searchButton, .nearMeButton {
+    background-color: #000; 
+    border: 1px solid #000; 
+    border-radius: 5px; 
+    color: #fff; 
+    cursor: pointer; 
+    font-family: 'Laurasia', sans-serif;
+    font-size: 1rem; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.searchButton:hover, .nearMeButton:hover {
+    background-color: #D9304F; 
+}
+
+
+.gridContainerCareer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    overflow: hidden;
+    align-items: center;
+    
+}
+
+.gridItemCareer {
+    background-color: #D9304F;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.gridItemCareer h2 {
+    font-family: 'Laurasia', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    flex-grow: 0;
+    color: white;
+}
+
+.gridItemCareer p {
+    font-family: 'Laurasia-Ligature'; 
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 0;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+}
+
+.gridItemCareer:hover p {
+    max-height: 10px; 
+}
+
+.aboutDiv {
+    padding: 40px;
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    max-width: 800px; 
+    margin: 20px auto; 
+}
+
+.aboutHeading {
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    color: #D9304F; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    font-family: 'Laurasia', sans-serif;
+}
+
+.aboutDescription {
+    font-size: 1.2em; 
+    margin-bottom: 30px; 
+    line-height: 1.6;
+    color: #333; 
+    font-family: 'Laurasia', sans-serif;
+}
+
+.keyPoints {
+    list-style-type: none;
+    padding: 0; 
+}
+
+.keyPoints li {
+    font-size: 1.1em; 
+    margin: 10px 0; 
+    background-color: #ffffff; 
+    border-radius: 5px; 
+    padding: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-family: 'Laurasia', sans-serif;
+}
+
+.historyHeading, .growthHeading, .presenceHeading {
+    font-size: 1.8em; 
+    margin: 20px 0 10px; 
+    color: #D9304F; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    font-family: 'Laurasia', sans-serif;
+}
+
+.historyDescription, .growthDescription, .presenceDescription {
+    font-size: 1em; 
+    margin-bottom: 20px; 
+    line-height: 1.5; 
+    color: #555; 
+    font-family: 'Laurasia', sans-serif;
+}
