@@ -1,8 +1,8 @@
 import './styles.css';
-import { loadHome } from './modules/home.js';
-import { loadMenu } from './modules/menu.js';
-import { loadCareers } from './modules/careers.js';
-import { loadAbout } from './modules/about.js'
+import { loadHome } from './src/modules/home.js';
+import { loadMenu } from './src/modules/menu.js';
+import { loadCareers } from './src/modules/careers.js';
+import { loadAbout } from './src/modules/about.js'
 
 loadHome(); // Load the home content initially
 
