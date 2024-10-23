@@ -1,4 +1,4 @@
-import './styles.css';
+import './src/styles.css';
 import { loadHome } from './src/modules/home.js';
 import { loadMenu } from './src/modules/menu.js';
 import { loadCareers } from './src/modules/careers.js';
